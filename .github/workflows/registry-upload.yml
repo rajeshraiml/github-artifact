@@ -1,4 +1,4 @@
-name: Node JS Package Upload
+name: Node JS Package Upload NPM registry
 on:
   workflow_dispatch:
 jobs:
@@ -15,6 +15,9 @@ jobs:
               scope: '@octocat'
         - name: Install dependencies
           run: npm ci
-        - run: npm publish
+        - name: Build website
+          run: npm run build 
+        - name: publish website           
+          run: npm publish
           env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}            
