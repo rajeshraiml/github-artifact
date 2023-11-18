@@ -1,4 +1,4 @@
-name: Deploy website
+name: Node JS Package Upload Github registry
 on:
   # push:
   #   branches:
