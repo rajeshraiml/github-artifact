@@ -31,7 +31,8 @@ jobs:
         with:
           name: dist-files
           path: |
-            dist            
+            dist  
+          retention-days: 5    #by default 90 days
 
   deploy:
     needs: build
